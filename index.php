@@ -1,7 +1,14 @@
-<h1>Intuji is</h1>
-
-<?php
-  for($i = 0 ; $i < 5 ; $i++){
-    echo "<h3>Awesome!</h3>";
-  }
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intuji Calendar</title>
+</head>
+<body>
+  <h1>Intuji Calendar</h1>
+  <form action="login.php" method="post">
+    <input type="submit" name="login_trigger" value="Login via Google" />
+  </form>
+</body>
+</html>
