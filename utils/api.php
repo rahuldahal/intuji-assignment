@@ -12,9 +12,6 @@ session_start();
 
 
 // import Google's official API for PHP
-require_once __DIR__ . '/../google-api-php-client/src/Client.php';
-require_once __DIR__ . '/../google-api-php-client/src/Model.php';
-// require_once __DIR__ . '/google-api-php-services/src/Oauth2/[]';
-require_once __DIR__ . '/../google-api-php-client-services/src/Calendar/Calendar.php';
+require_once 'vendor/autoload.php';
 
 ?>

@@ -1,0 +1,9 @@
+{
+    "name": "rdaahal/intuji-assignment",
+    "description": "Backend assignment",
+    "type": "library",
+    "require": {
+        "google/apiclient": "^2.16"
+    },
+    "license": "MIT"
+}
