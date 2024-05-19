@@ -40,10 +40,19 @@ if (count($events->getItems()) == 0) {
     }
   
     // Display the title and date
-    echo '<li>' . $event->getSummary() . ' (' . toHumanReadable($start) . ') <a href="'. $link . '" target="_blank">See on Calendar</a></li>';
+    echo '<li>' . $event->getSummary() . ' (' . toHumanReadable($start) . ') <a href="'. $link . '" target="_blank">See on Calendar</a>';
+
+    // The Delete button alongside
+    echo '<form method="post" action="delete_event.php">';
+    echo '<input type="hidden" name="event_id" value="' . $event->id . '">';
+    echo '<input type="submit" value="Delete">';
+    echo '</form>';
   }
 
   echo "</ul>";
 }
 
 ?>
+
+
+<a href="create_event.php">Create Event</a>
