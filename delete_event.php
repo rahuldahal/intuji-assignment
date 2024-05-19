@@ -1,5 +1,6 @@
 <?php
 
+require('includes/header.php');
 require_once 'vendor/autoload.php';
 require('utils/api.php');
 
@@ -23,18 +24,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
       // Delete the event
       $calendarService->events->delete('primary', $event_id);
-      echo "Event deleted successfully.";
+      echo '<div class="alert alert-success" role="alert">Event deleted successfully.</div>';
     } catch (Exception $e) {
-      echo 'Error deleting event: ' . $e->getMessage();
+      echo '<div class="alert alert-danger" role="alert">Error deleting event: ' . $e->getMessage() . '</div>';
     }
   } else {
-      echo "Event ID not provided.";
+      echo '<div class="alert alert-warning" role="alert">Event ID not provided.</div>';
   }
 } else {
-    echo "Invalid request method.";
+    echo '<div class="alert alert-danger" role="alert">Invalid request method.</div>';
 }
 
-// redirect after 3 seconds
-echo '<p>Will redirect automatically in 3 seconds!</p>';
+echo '<p>Redirecting in 3 seconds... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></p>';
+
 header("refresh:3;url=calendar.php");
 ?>
+
+</main>
+</body>
+</html>
