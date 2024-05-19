@@ -11,4 +11,14 @@ require_once 'config.php';
 // Google API credentials
 $scope = 'https://www.googleapis.com/auth/calendar';
 
+// Google Client instance from the API
+$client = new Google_Client();
+
+$client->addScope($scope);
+
+// These variables come from config.php
+$client->setClientId($client_id);
+$client->setRedirectUri($redirect_uri);
+$client->setClientSecret($client_secret);
+
 ?>
